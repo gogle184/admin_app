@@ -15,6 +15,9 @@ gem 'cancancan'
 # 認証機能
 gem 'devise'
 
+# 環境変数
+gem 'dotenv'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
