@@ -9,6 +9,9 @@ Bundler.require(*Rails.groups)
 module AdminApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+ADMIN_USER=admin_user
+    config.admin_username = ENV['admin_user']
+    config.admin_password = ENV['admin_password']
     config.load_defaults 7.0
 
     config.i18n.default_locale = :ja

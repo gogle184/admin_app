@@ -6,6 +6,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def initialize_profile
-  self.profile = { "email": self.email, "name": self.name, "old": self.old }
+   self.profile = { "email": self.email, "name": self.name, "old": self.old }
   end
 end
