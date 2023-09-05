@@ -1,0 +1,16 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<% if user_signed_in? %>
+  <li class="nav-item">
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+  </li>
+<% else %>
+  <%= link_to new_user_registration_path, class: "btn btn-warning mt-3 btn-block" do %>
+    <i class="bi bi-person-plus fs-3 me-2"></i>
+    利用者で登録する
+  <% end %>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <%= link_to "利用者でログイン", new_user_session_path, class: "btn btn-warning", type: "button" %>
+  </div>
+<% end %>
