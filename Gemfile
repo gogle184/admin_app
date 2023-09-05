@@ -9,6 +9,9 @@ gem 'rails_admin', '~> 3.0'
 # rails日本語化
 gem 'rails-i18n'
 
+# 認証機能
+gem 'cancancan'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
@@ -50,8 +53,6 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
-
-gem 'sass-rails', '~> 6.0'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
