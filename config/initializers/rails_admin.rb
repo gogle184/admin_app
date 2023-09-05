@@ -2,6 +2,19 @@ RailsAdmin.config do |config|
   config.asset_source = :importmap
   ### Popular gems integration
 
+  config.model 'User' do
+    list do
+      field :email
+      field :name
+      field :old
+      field :profile do
+        pretty_value do
+          JSON.pretty_generate(value) if value.present?
+        end
+      end
+    end
+  end
+
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
