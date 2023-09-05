@@ -12,6 +12,9 @@ gem 'rails-i18n'
 # 認証機能
 gem 'cancancan'
 
+# 認証機能
+gem 'devise'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
