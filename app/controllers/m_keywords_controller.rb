@@ -26,7 +26,7 @@ class MKeywordsController < ApplicationController
 
   def update
     if @m_keyword.update(m_keyword_params)
-      redirect_to m_keyword_path(@m_keyword), notice: 'MKeyword was successfully updated.'
+      redirect_to m_keywords_path, notice: 'MKeyword was successfully updated.'
     else
       render :edit
     end
