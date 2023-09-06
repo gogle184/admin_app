@@ -1,2 +1,14 @@
-<h1>MServices#index</h1>
-<p>Find me in app/views/m_services/index.html.erb</p>
+<h1>MService List</h1>
+
+<ul>
+  <% MService.all.each do |m_service| %>
+    <li>
+      is_royalty: <%= m_service.is_royalty %><br>
+      is_browsing_history: <%= m_service.is_browsing_history %><br>
+      is_japan_concierge: <%= m_service.is_japan_concierge %><br>
+      is_ai_concierge: <%= m_service.is_ai_concierge %><br>
+      is_questionnaire: <%= m_service.is_questionnaire %><br>
+      is_keyword: <%= m_service.is_keyword %><br>
+    </li>
+  <% end %>
+</ul>
