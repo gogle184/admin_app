@@ -1,0 +1,2 @@
+class MKeyword < ApplicationRecord
+end

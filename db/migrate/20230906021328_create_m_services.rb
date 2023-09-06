@@ -12,3 +12,4 @@ class CreateMServices < ActiveRecord::Migration[7.0]
     end
   end
 end
+#【マスタ】サービス設定 m_services

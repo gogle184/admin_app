@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_06_021328) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_06_024003) do
+  create_table "m_keyword_settings", force: :cascade do |t|
+    t.text "exclud_url", default: "", null: false
+    t.string "exclud_tag", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "m_keywords", force: :cascade do |t|
+    t.string "keyowrd", default: "", null: false
+    t.text "word", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "m_services", force: :cascade do |t|
     t.boolean "is_royalty", default: true, null: false
     t.boolean "is_browsing_history", default: true, null: false
