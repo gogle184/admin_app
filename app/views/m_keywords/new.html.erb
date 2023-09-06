@@ -1,0 +1,19 @@
+<h1>【マスタ】キーワード設定設定 新規作成</h1>
+
+<%= form_with(model: @m_keyword, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :keyword %>
+    <%= form.text_field :keyword %>
+  </div>
+
+  <div class="field">
+    <%= form.label :word %>
+    <%= form.text_area :word %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'キーワード設定作成' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', m_keywords_path %>

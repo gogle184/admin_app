@@ -1,0 +1,11 @@
+<h1>MService Details</h1>
+
+<p><strong>is_royalty:</strong> <%= @m_service.is_royalty %></p>
+<p><strong>is_browsing_history:</strong> <%= @m_service.is_browsing_history %></p>
+<p><strong>is_japan_concierge:</strong> <%= @m_service.is_japan_concierge %></p>
+<p><strong>is_ai_concierge:</strong> <%= @m_service.is_ai_concierge %></p>
+<p><strong>is_questionnaire:</strong> <%= @m_service.is_questionnaire %></p>
+<p><strong>is_keyword:</strong> <%= @m_service.is_keyword %></p>
+
+<%= link_to 'Edit', edit_m_service_path(@m_service) %> |
+<%= link_to 'Back', m_services_path %>

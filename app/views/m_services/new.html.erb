@@ -1,0 +1,39 @@
+<h1>【マスタ】サービス設定 新規作成</h1>
+
+<%= form_with(model: @m_service, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :is_royalty %>
+    <%= form.check_box :is_royalty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_browsing_history %>
+    <%= form.check_box :is_browsing_history %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_japan_concierge %>
+    <%= form.check_box :is_japan_concierge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_ai_concierge %>
+    <%= form.check_box :is_ai_concierge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_questionnaire %>
+    <%= form.check_box :is_questionnaire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_keyword %>
+    <%= form.check_box :is_keyword %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create MService' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', m_services_path %>

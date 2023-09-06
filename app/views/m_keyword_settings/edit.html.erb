@@ -1,0 +1,19 @@
+<h1>【マスタ】コンテンツを検索するための情報(除外系) 編集</h1>
+
+<%= form_with(model: @m_keyword_setting, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :exclud_url %>
+    <%= form.text_area :exclud_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exclud_tag %>
+    <%= form.text_field :exclud_tag %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit '更新する' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', m_keyword_settings_path %>

@@ -13,3 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+//= require rails-ujs
