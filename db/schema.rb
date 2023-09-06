@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_06_053444) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_06_055940) do
   create_table "m_keyword_settings", force: :cascade do |t|
     t.text "exclud_url", default: "", null: false
     t.string "exclud_tag", default: "", null: false
@@ -43,6 +43,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_053444) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "template_screens", force: :cascade do |t|
+    t.text "title", default: "", null: false
+    t.text "template", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "template_wysiwygs", force: :cascade do |t|
+    t.text "title", default: "", null: false
+    t.text "template", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

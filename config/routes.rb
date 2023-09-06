@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   resources :m_keyword_settings
   #【マスタ】コンテンツを検索するための情報(キーワード) m_keyword
   resources :m_keywords
+  #【マスタ】画面編集テンプレート template_screen
+  resources :template_screens
+  # 【マスタ】ウィジウィグ用テンプレート　template_wysiwyg
+  resources :template_wysiwygs
 end
