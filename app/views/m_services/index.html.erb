@@ -1,4 +1,4 @@
-<h1>MService List</h1>
+<h1>MService List Index</h1>
 
 <ul>
   <% MService.all.each do |m_service| %>
@@ -9,6 +9,11 @@
       is_ai_concierge: <%= m_service.is_ai_concierge %><br>
       is_questionnaire: <%= m_service.is_questionnaire %><br>
       is_keyword: <%= m_service.is_keyword %><br>
+      <%= link_to "Edit", edit_m_service_path(m_service) %>
+      <%= button_to "Delete", m_service_path(m_service), method: :delete%>
     </li>
   <% end %>
+
+   <p><%= link_to "【マスタ】サービス設定作成", new_m_service_path%></p>
+   <p><%= link_to "トップ", root_path%></p>
 </ul>
