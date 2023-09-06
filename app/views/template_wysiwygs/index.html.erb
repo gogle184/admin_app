@@ -1,0 +1,15 @@
+<h1>【マスタ】ウィジウィグ用テンプレート</h1>
+
+<ul>
+  <% @template_wysiwygs.each do |template_wysiwyg| %>
+    <li>
+      title: <%= template_wysiwyg.title %><br>
+      template: <%= template_wysiwyg.template %><br>
+      <%= link_to "Show", template_wysiwyg_path(template_wysiwyg) %>
+      <%= link_to "Edit", edit_template_wysiwyg_path(template_wysiwyg) %>
+      <%= button_to "Delete", template_wysiwyg_path(template_wysiwyg), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "New TemplateWysiwyg", new_template_wysiwyg_path %></p>

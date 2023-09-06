@@ -1,0 +1,2 @@
+class TemplateScreen < ApplicationRecord
+end

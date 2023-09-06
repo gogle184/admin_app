@@ -1,5 +1,4 @@
 <h1>【マスタ】コンテンツを検索するための情報(キーワード) INDEX</h1>
-
 <ul>
   <% MKeyword.all.each do |m_keyword| %>
     <li>
@@ -9,7 +8,6 @@
       <%= button_to "Delete", m_keyword_path(m_keyword), method: :delete %>
     </li>
   <% end %>
-
   <p><%= link_to "【マスタ】キーワード設定作成", new_m_keyword_path %></p>
   <p><%= link_to "トップ", root_path %></p>
 </ul>

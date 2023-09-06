@@ -1,0 +1,8 @@
+<h1>【マスタ】WYSIWYGテンプレート詳細</h1>
+
+<p><strong>Title:</strong> <%= @template_wysiwyg.title %></p>
+<p><strong>Template:</strong></p>
+<pre><%= @template_wysiwyg.template %></pre>
+
+<%= link_to 'Edit', edit_template_wysiwyg_path(@template_wysiwyg) %> |
+<%= link_to 'Back', template_wysiwygs_path %>

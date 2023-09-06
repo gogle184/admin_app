@@ -1,0 +1,19 @@
+<h1>【マスタ】WYSIWYGテンプレート 新規作成</h1>
+
+<%= form_with(model: @template_wysiwyg, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :template %>
+    <%= form.text_area :template %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'テンプレート作成' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', template_wysiwygs_path %>

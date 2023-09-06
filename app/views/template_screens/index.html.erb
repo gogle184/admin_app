@@ -1,0 +1,15 @@
+<h1>【マスタ】画面編集テンプレート </h1>
+
+<ul>
+  <% @template_screens.each do |template_screen| %>
+    <li>
+      title: <%= template_screen.title %><br>
+      template: <%= template_screen.template %><br>
+      <%= link_to "Show", template_screen_path(template_screen) %>
+      <%= link_to "Edit", edit_template_screen_path(template_screen) %>
+      <%= button_to "Delete", template_screen_path(template_screen), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "New TemplateScreen", new_template_screen_path %></p>

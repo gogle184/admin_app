@@ -1,0 +1,8 @@
+<h1>【マスタ】画面編集テンプレート</h1>
+
+<p><strong>Title:</strong> <%= @template_screen.title %></p>
+<p><strong>Template:</strong></p>
+<pre><%= @template_screen.template %></pre>
+
+<%= link_to 'Edit', edit_template_screen_path(@template_screen) %> |
+<%= link_to 'Back', template_screens_path %>
