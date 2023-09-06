@@ -5,6 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :posts, dependent: :destroy
+
   def initialize_profile
    self.profile = { "email": self.email, "name": self.name, "old": self.old }
   end

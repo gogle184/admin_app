@@ -4,13 +4,23 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <title>AdminApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-visit-control" content="reload">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script src="https://cdn.tiny.cloud/1/zhvixj5pd22n9l3baxak4ntjajdg6g5t20dissewumbok5p6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
 
   <body>
     <%= yield %>
+    <script>
+      tinymce.init({
+        selector: 'textarea',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        language: 'ja',
+      });
+    </script>
   </body>
 </html>

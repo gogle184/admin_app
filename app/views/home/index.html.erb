@@ -5,6 +5,9 @@
   <li class="nav-item">
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
   </li>
+  <li>
+    <%= link_to "投稿する", new_post_path %>
+  </li>
 <% else %>
   <%= link_to new_user_registration_path, class: "btn btn-warning mt-3 btn-block" do %>
     <i class="bi bi-person-plus fs-3 me-2"></i>

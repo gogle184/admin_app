@@ -1,0 +1,24 @@
+<h1>Posts#new</h1>
+<span>現在ログイン中のユーザー：<%= current_user.name %></span>
+
+<%= form_for(@post, url: posts_path) do |f| %>
+    <div>
+        <%= f.label :タイトル %><br>
+        <%= f.text_field :title, autofocus: true %>
+    </div>
+    <div>
+        <%= f.label :中身 %><br>
+        <%= f.text_area :content, class: "tinymce", rows: 28 %>
+    </div>
+    <div><%= f.submit "投稿する" %></div>
+<% end %>
+
+<div class="post-list">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h3 class="post-title"><%= post.title %></h3>
+      <p class="post-author">投稿者名: <%= post.user.name %></p>
+      <div class="post-content"><%= sanitize post.content %></div>
+    </div>
+  <% end %>
+</div>

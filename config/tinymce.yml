@@ -1,0 +1,20 @@
+default: &default
+  selector: textarea.tinymce
+  plugins:
+    - link
+    - table
+    - image
+  toolbar:
+    - undo redo | formatselect | fontselect | fontsizeselect | bold | italic | underline | alignleft | aligncenter | alignjustify | alignright
+  height: 300
+  menubar: false
+  branding: false
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
