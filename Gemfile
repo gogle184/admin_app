@@ -18,6 +18,11 @@ gem 'devise'
 # 環境変数
 gem 'dotenv'
 
+# wysiwyg
+gem "tinymce-rails"
+# 日本語化
+gem "tinymce-rails-langs"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 

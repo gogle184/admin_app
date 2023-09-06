@@ -1,0 +1,2 @@
+class MService < ApplicationRecord
+end
