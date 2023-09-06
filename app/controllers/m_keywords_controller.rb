@@ -15,7 +15,7 @@ class MKeywordsController < ApplicationController
   def create
     @m_keyword = MKeyword.new(m_keyword_params)
     if @m_keyword.save
-      redirect_to m_keyword_path(@m_keyword), notice: 'MKeyword was successfully created.'
+      redirect_to m_keywords_path, notice: 'MKeyword was successfully created.'
     else
       render :new
     end

@@ -15,7 +15,7 @@ class MServicesController < ApplicationController
   def create
     @m_service = MService.new(m_service_params)
     if @m_service.save
-      redirect_to m_service_path(@m_service), notice: 'MService was successfully created.'
+      redirect_to m_services_path, notice: 'MService was successfully created.'
     else
       render :new
     end

@@ -15,7 +15,7 @@ class MKeywordSettingsController < ApplicationController
   def create
     @m_keyword_setting = MKeywordSetting.new(m_keyword_setting_params)
     if @m_keyword_setting.save
-      redirect_to m_keyword_setting_path(@m_keyword_setting), notice: 'MKeywordSetting was successfully created.'
+      redirect_to m_keyword_settings_path, notice: 'MKeywordSetting was successfully created.'
     else
       render :new
     end
