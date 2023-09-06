@@ -1,0 +1,19 @@
+<h1>【マスタ】画面編集テンプレート 編集</h1>
+
+<%= form_with(model: @template_screen, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :template %>
+    <%= form.text_area :template %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'テンプレート更新' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', template_screens_path %>
