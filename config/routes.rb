@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'm_keyword_settings/index'
   root 'home#index'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -10,4 +9,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   # 【マスタ】サービス設定 m_services
   resources :m_services
+  # 【マスタ】コンテンツを検索するための情報(キーワード、除外系) m_keyword_setting
+  resources :m_keyword_settings
+  #【マスタ】コンテンツを検索するための情報(キーワード) m_keyword
+  resources :m_keywords
 end
