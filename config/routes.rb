@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # 【マスタ】サービス設定 m_services
+  resources :m_services
 end
