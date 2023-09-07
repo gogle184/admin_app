@@ -18,6 +18,8 @@ gem 'devise'
 # 環境変数
 gem 'dotenv'
 
+gem "webpacker"
+
 # wysiwyg
 gem "tinymce-rails"
 # 日本語化

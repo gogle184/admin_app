@@ -15,3 +15,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //= require rails-ujs
+//= require tinymce
