@@ -15,6 +15,13 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Template_screen do
+    edit do
+      field :template, :tinymce
+    end
+  end
+
+
   config.authenticate_with do
     authenticate_or_request_with_http_basic('Site Message') do |username, password|
       username == Rails.application.config.admin_username && password == Rails.application.config.admin_password
